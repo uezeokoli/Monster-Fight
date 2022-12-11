@@ -48,7 +48,8 @@ class Monster():
     def lose_fight(self):
         self.exp += 1
         self.current_hp = self.max_hp
-  
+
+# this function takes two monster objects and returns the rounds, winning monster, and winning monster's attacks        
 def monster_fight(monster1, monster2):
     m1= sorted(sorted(monster1.attacks.items(),key= lambda x:x[0])[::-1], key= lambda x:x[-1])[::-1]
     m2= sorted(sorted(monster2.attacks.items(),key= lambda x:x[0])[::-1], key= lambda x:x[-1])[::-1]
